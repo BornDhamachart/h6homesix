@@ -1,21 +1,20 @@
 import { useState } from "react";
-import { RxHamburgerMenu } from 'react-icons/rx';
+import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200">
+    <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 opacity-80">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="" className="flex items-center">
-          {/* <img
+        <Link to="/" className="flex items-center">
+          <img
             src="https://flowbite.com/docs/images/logo.svg"
             className="h-8 mr-3"
             alt="Flowbite Logo"
-          /> */}
-          <span className="text-center text-2xl font-semibold">
-            Test
-          </span>
-        </a>
+          />
+          <span className="text-center text-2xl font-semibold">Test</span>
+        </Link>
         <div className="flex md:order-2">
           <button
             type="button"
@@ -32,41 +31,35 @@ const Navbar = () => {
           </button>
         </div>
         <div
-          className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${!isOpen && "hidden"}`}
+          className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
+            !isOpen && "hidden"
+          }`}
         >
           <div className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
-            <div>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-              >
-                Home
-              </a>
-            </div>
-            <div>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-              >
-                About
-              </a>
-            </div>
-            <div>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-              >
-                Services
-              </a>
-            </div>
-            <div>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-              >
-                Contact
-              </a>
-            </div>
+            <Link
+              to="/"
+              className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+            >
+              About
+            </Link>
+            <Link
+              to="/services"
+              className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+            >
+              Services
+            </Link>
+            <Link
+              to="/contact"
+              className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>
