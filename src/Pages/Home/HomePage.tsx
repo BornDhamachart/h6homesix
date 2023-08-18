@@ -1,6 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import {useRef} from "react"
 
 const HomePage = () => {
+  const ref = useRef(null)
+
   const container = {
     show: {
       transition: {
