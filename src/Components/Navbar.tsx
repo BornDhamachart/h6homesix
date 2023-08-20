@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 opacity-90">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="w-full flex flex-wrap items-center justify-between p-4">
         <Link to="/" className="flex items-center">
           <img
             src="./images/download.png"
@@ -35,7 +35,7 @@ const Navbar = () => {
             !isOpen && "hidden"
           }`}
         >
-          <div className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
+          <div className="flex flex-col p-4 md:p-0 mt-4 font-medium md:text-xl border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-24 md:mt-0 md:border-0 md:bg-white">
             <Link
               to="/"
               className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
