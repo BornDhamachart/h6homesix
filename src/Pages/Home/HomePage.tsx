@@ -1,5 +1,7 @@
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
+import CarouselComponent from "../../Components/Carousel";
+import { Carousel } from "antd";
 
 const HomePage = () => {
   const ref = useRef(null);
@@ -68,7 +70,7 @@ const HomePage = () => {
   };
 
   const textUp = {
-    hidden: { opacity: 0, y: 75 },
+    hidden: { opacity: 0, y: 25 },
     show: {
       opacity: 1,
       y: 0,
@@ -107,13 +109,20 @@ const HomePage = () => {
       </motion.div>
 
       <motion.div
-        className="flex gap-4 ml-16 mt-8 mb-8"
+        className="flex gap-8 ml-16 mt-8 mb-8"
         initial="hidden"
         animate="show"
         variants={item}
       >
-        <div className="text-lg py-4 underline">ผลงาน</div>
-        <div className="text-lg py-4 underline">บริการ</div>
+        <div className="group text-xl cursor-pointer">
+          ผลงาน
+          <span className="block w-0 group-hover:w-14 transition-all duration-300 h-0.5 bg-black"></span>
+        </div>
+        <div className="group text-xl cursor-pointer">
+          บริการ
+          <span className="block w-0 group-hover:w-14 transition-all duration-300 h-0.5 bg-black"></span>
+        </div>
+        {/* <div className="text-lg py-4 underline">บริการ</div> */}
       </motion.div>
 
       <motion.div
@@ -122,11 +131,22 @@ const HomePage = () => {
         initial="hidden"
         animate="show"
       >
-        <img
-          src="./images/2-2-1024x768.jpeg"
-          className="lg:w-4/5 lg:h-[750px] h-[400px] w-full"
-          // layoutId='main-image-1'
-        />
+        <div className="w-4/5">
+          <Carousel effect="fade" autoplay={true} dots={false}>
+            <img
+              src="./images/2-2-1024x768.jpeg"
+              className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
+            />
+            <img
+              src="./images/2-2-1024x768.jpeg"
+              className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
+            />
+            <img
+              src="./images/2-2-1024x768.jpeg"
+              className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
+            />
+          </Carousel>
+        </div>
       </motion.div>
 
       <motion.div
@@ -157,21 +177,25 @@ const HomePage = () => {
         </div>
       </motion.div>
 
-      <div className="w-full flex justify-center mb-6">
-        <motion.button
-          className="w-2/3 text-center bg-gray-200 rounded-xl mt-6 py-2 text-xl"
-          initial="hidden"
-          animate={mainControls}
-          variants={textUp}
-          ref={ref}
+      <motion.div
+        className="w-full flex justify-center mb-6"
+        animate={mainControls}
+        variants={textUp}
+        ref={ref}
+        initial="hidden"
+      >
+        <a
+          className="block w-2/3 text-center bg-gray-200 rounded-xl mt-6 py-2 text-xl cursor-pointer hover:scale-105 transition duration-300"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSc1fPIBxC5Ui3hnFzH1DqGqVAwndtw-KHNl1BCYXM-c55XZyg/viewform"
+          target="_blank"
         >
           สนใจรีโนเวทบ้าน
-        </motion.button>
+        </a>
+      </motion.div>
+
+      <div className="my-16">
+        <CarouselComponent />
       </div>
-
-      <div className="bg-gray-100 h-96 my-10"></div>
-
-      <div className="bg-black h-48"></div>
     </>
   );
 };
