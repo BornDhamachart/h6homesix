@@ -8,16 +8,18 @@ import Contact from "./Pages/Contact/ContactPage";
 import Project from "./Pages/Project/ProjectPage";
 import Footer from "./Components/Footer";
 import { AnimatePresence } from "framer-motion";
+import MinjiHouse from "./Pages/Project/House/MinjiHouse";
 
 function App() {
   return (
     <>
       <AnimatePresence>
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="pt-20">
           <Routes>
             <Route path="" element={<Home />} />
-            <Route path="project" element={<Project />} />
+            <Route path="projects" element={<Project />} />
+            <Route path="minjihouse" element={<MinjiHouse />}/>
             <Route path="services" element={<Services />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />

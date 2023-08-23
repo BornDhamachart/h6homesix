@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import { MenuOutlined } from '@ant-design/icons';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-2xl text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           >
-            <RxHamburgerMenu />
+            <MenuOutlined />
           </button>
         </div>
         <div
@@ -43,10 +44,10 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              to="/project"
+              to="/projects"
               className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
             >
-              Project
+              Projects
             </Link>
             <Link
               to="/about"

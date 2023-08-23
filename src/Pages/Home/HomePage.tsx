@@ -57,18 +57,6 @@ const HomePage = () => {
     },
   };
 
-  const gallery = {
-    hidden: { opacity: 0, x: -200 },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        ease: "easeInOut",
-        duration: 1.5,
-      },
-    },
-  };
-
   const textUp = {
     hidden: { opacity: 0, y: 25 },
     show: {
@@ -134,15 +122,15 @@ const HomePage = () => {
         <div className="w-4/5">
           <Carousel effect="fade" autoplay={true} dots={false}>
             <img
-              src="./images/2-2-1024x768.jpeg"
+              src="./images/2-2-1024x7681.jpeg"
               className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
             />
             <img
-              src="./images/2-2-1024x768.jpeg"
+              src="./images/2-2-1024x7681.jpeg"
               className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
             />
             <img
-              src="./images/2-2-1024x768.jpeg"
+              src="./images/2-2-1024x7681.jpeg"
               className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
             />
           </Carousel>
@@ -193,9 +181,15 @@ const HomePage = () => {
         </a>
       </motion.div>
 
-      <div className="my-16">
+      <motion.div
+        className="my-16"
+        animate={mainControls}
+        variants={textUp}
+        ref={ref}
+        initial="hidden"
+      >
         <CarouselComponent />
-      </div>
+      </motion.div>
     </>
   );
 };

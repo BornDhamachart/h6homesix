@@ -1,37 +1,45 @@
-import React from "react";
-import { Carousel } from "antd";
-import CarouselComponent from "../../Components/Carousel";
+import React, { useRef } from "react";
 
 const ProjectPage = () => {
+
   return (
     <>
-      <div className="font-bold text-6xl mt-16 ml-16">Minji House</div>
-      <div className="text-3xl mt-2 ml-16">Suksawat | 24.62 SQ.M</div>
-      <div className="text-md mt-2 ml-16">teststetttttttttttttttt</div>
-      <div className="text-md mt-2 ml-16">teststetttttttttttttttt</div>
-      <div className="text-md mt-2 ml-16">teststetttttttttttttttt</div>
-      <div className="text-md mt-2 ml-16">teststetttttttttttttttt</div>
-      <div className="text-md mt-2 ml-16">teststetttttttttttttttt</div>
-
-      <div className="w-full px-16">
-        <Carousel>
+      <div className="grid grid-cols-3 gap-4">
+        <div className="cursor-pointer">
           <img
             src="./images/2-2-1024x768.jpeg"
-            className="lg:w-4/5 lg:h-[750px] h-[400px] w-full"
+            className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
           />
+          <div className="w-10/12 mx-auto font-bold mt-1">HOUSE EKKAMAI</div>
+        </div>
+        <div className="cursor-pointer">
           <img
             src="./images/2-2-1024x768.jpeg"
-            className="lg:w-4/5 lg:h-[750px] h-[400px] w-full"
+            className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
           />
+          <div className="w-10/12 mx-auto font-bold mt-1">HOUSE EKKAMAI</div>
+        </div>
+        <div className="cursor-pointer">
           <img
             src="./images/2-2-1024x768.jpeg"
-            className="lg:w-4/5 lg:h-[750px] h-[400px] w-full"
+            className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
           />
-        </Carousel>
-      </div>
-      <div className="font-bold text-3xl mt-12 mb-6 ml-16">Other projects</div>
-      <div className="mb-16">
-        <CarouselComponent />
+          <div className="w-10/12 mx-auto font-bold mt-1">HOUSE EKKAMAI</div>
+        </div>
+        <div className="cursor-pointer">
+          <img
+            src="./images/2-2-1024x768.jpeg"
+            className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
+          />
+          <div className="w-10/12 mx-auto font-bold mt-1">HOUSE EKKAMAI</div>
+        </div>
+        <div className="cursor-pointer">
+          <img
+            src="./images/2-2-1024x768.jpeg"
+            className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
+          />
+          <div className="w-10/12 mx-auto font-bold mt-1">HOUSE EKKAMAI</div>
+        </div>
       </div>
     </>
   );

@@ -46,9 +46,14 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className="m-16">
+    <>
+    <div>
+      test
+    </div>
+    <div className="m-16 w-3/4">
       <Collapse items={items} defaultActiveKey={["1"]} />
     </div>
+    </>
   );
 };
 
