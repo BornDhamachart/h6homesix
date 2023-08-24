@@ -106,7 +106,7 @@ const ServicesPage = () => {
   return (
     <>
       <motion.div variants={textUp} initial="hidden" animate="show">
-        <div className="mt-16 ml-16">
+        <div className="mt-16 md:ml-16 ml-8">
           <div className="text-4xl mb-2">ค่าบริการออกแบบ</div>
           <div>
             <span className="text-lg md:text-xl py-2 mr-2">
@@ -126,7 +126,7 @@ const ServicesPage = () => {
           </div>
         </div>
 
-        <div className="mx-16 mt-8 my-16 md:w-1/2 w-4/5 pb-28">
+        <div className="ml-8 md:ml-16 mt-8 my-16 md:w-1/2 w-4/5 pb-28">
           <div className="text-4xl mb-6">FAQs</div>
           <Collapse items={items} defaultActiveKey={["1"]} />
         </div>

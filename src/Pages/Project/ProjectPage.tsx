@@ -22,7 +22,7 @@ const ProjectPage = () => {
         variants={textLeft}
         initial="hidden"
       >
-        <span className="text-2xl ml-16">- -</span>
+        <span className="text-2xl ml-8 md:ml-16">- -</span>
         <span className="text-2xl ml-2">Select Projects</span>
       </motion.div>
 

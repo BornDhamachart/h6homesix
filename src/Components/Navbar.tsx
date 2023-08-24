@@ -10,12 +10,14 @@ const Navbar = () => {
         <Link to="/" className="flex items-center">
           <img
             src="./images/logo.png"
-            className="h-16 mr-3"
+            className="h-16 sm:mr-3"
             alt="Homesix logo"
           />
-          <span className="text-center text-4xl font-semibold">homesix</span>
+          <span className="text-center text-2xl md:text-4xl font-semibold">
+            homesix
+          </span>
         </Link>
-        <div className="flex md:order-2">
+        <div className="flex md:order-2 items-center">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSc1fPIBxC5Ui3hnFzH1DqGqVAwndtw-KHNl1BCYXM-c55XZyg/viewform"
             target="_blank"

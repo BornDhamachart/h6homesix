@@ -11,12 +11,12 @@ const Carousel = () => {
   };
 
   return (
-    <div className="h-64">
+    <div className="h-24 md:h-64 lg:h-64 w-full px-6 md:px-12">
       <Slider {...settings}>
         <Link to="/minjihouse" className="cursor-pointer">
           <img
             src="./images/CoverImage/Minji-2.jpeg"
-            className="h-36 md:h-48 lg:h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
+            className="h-24 md:h-48 lg:h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
           />
           <div className="group w-10/12 mx-auto font-bold mt-4 ">
             MIN-JI HOUSE
@@ -26,7 +26,7 @@ const Carousel = () => {
         <Link to="/japandihouse" className="cursor-pointer">
           <img
             src="./images/CoverImage/Japandi-5.jpeg"
-            className="h-36 md:h-48 lg:h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
+            className="h-24 md:h-48 lg:h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
           />
           <div className="group w-10/12 mx-auto font-bold mt-4 ">
             JAPANDI HOUSE
@@ -36,7 +36,7 @@ const Carousel = () => {
         <Link to="/minjihouse" className="cursor-pointer">
           <img
             src="./images/CoverImage/Minji-3.jpeg"
-            className="h-36 md:h-48 lg:h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
+            className="h-24 md:h-48 lg:h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
           />
           <div className="group w-10/12 mx-auto font-bold mt-4 ">
             MIN-JI HOUSE
@@ -46,7 +46,7 @@ const Carousel = () => {
         <Link to="/japandihouse" className="cursor-pointer">
           <img
             src="./images/CoverImage/Japandi-2.jpeg"
-            className="h-36 md:h-48 lg:h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
+            className="h-24 md:h-48 lg:h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
           />
           <div className="group w-10/12 mx-auto font-bold mt-4 ">
             JAPANDI HOUSE

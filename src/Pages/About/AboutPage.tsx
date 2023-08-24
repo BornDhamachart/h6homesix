@@ -15,7 +15,7 @@ const AboutPage = () => {
   return (
     <>
       <motion.div variants={textUp} initial="hidden" animate="show">
-        <div className="w-full text-center mt-16">
+        <div className="w-full text-center mt-16 px-8">
           <div className="text-4xl font-bold mb-4">H6 Homesix Studio</div>
           <div>กลุ่มเพื่อน ตั้งแต่สมัยประถม-มัธยม ที่มีอุดมคติเดียวกัน คือ</div>
           <div className="font-bold">

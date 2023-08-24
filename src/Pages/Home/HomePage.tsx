@@ -99,7 +99,7 @@ const HomePage = () => {
   return (
     <>
       <motion.div
-        className="ml-16 mt-16"
+        className="ml-6 md:ml-16 mt-16"
         initial="hidden"
         animate="show"
         variants={container}
@@ -116,11 +116,11 @@ const HomePage = () => {
           ))}
         </motion.div>
         <div className="mt-12">
-          <motion.div className="text-5xl md:text-7xl py-4" variants={item}>
+          <motion.div className="text-4xl md:text-7xl py-4" variants={item}>
             รีโนเวทบ้านใหม่
           </motion.div>
           <motion.div
-            className="text-5xl md:text-7xl py-4 ml-20"
+            className="text-4xl md:text-7xl py-4 ml-20"
             variants={item}
           >
             งบไม่บานปลาย
@@ -129,7 +129,7 @@ const HomePage = () => {
       </motion.div>
 
       <motion.div
-        className="flex gap-8 ml-16 mt-8 mb-8"
+        className="flex gap-8 ml-10 md:ml-16 mt-8 mb-8"
         initial="hidden"
         animate="show"
         variants={item}
@@ -158,23 +158,23 @@ const HomePage = () => {
           <Carousel effect="fade" autoplay={true} dots={false}>
             <img
               src="./images/CoverImage/Minji-2.jpeg"
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full transition duration-300 ease-out hover:scale-105"
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
             />
             <img
               src="./images/CoverImage/Minji-3.jpeg"
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full transition duration-300 ease-out hover:scale-105"
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
             />
             <img
               src="./images/CoverImage/Minji-6.jpeg"
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full transition duration-300 ease-out hover:scale-105"
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
             />
             <img
               src="./images/CoverImage/Japandi-4.jpeg"
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full transition duration-300 ease-out hover:scale-105"
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
             />
             <img
               src="./images/CoverImage/Japandi-5.jpeg"
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full transition duration-300 ease-out hover:scale-105"
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
             />
           </Carousel>
         </div>
@@ -216,7 +216,7 @@ const HomePage = () => {
       </motion.div>
 
       <motion.div
-        className="w-full flex justify-center my-12 gap-10 items-center"
+        className="w-full flex justify-center my-12 gap-6 items-center"
         animate={mainControls1}
         variants={textUp}
         ref={ref1}
@@ -236,12 +236,12 @@ const HomePage = () => {
         ref={ref2}
         initial="hidden"
       >
-        <span className="text-2xl ml-16">- -</span>
+        <span className="text-2xl md:ml-16 ml-8">- -</span>
         <span className="text-2xl ml-2">Select Projects</span>
       </motion.div>
 
       <motion.div
-        className="mb-16"
+        className="mb-24"
         animate={mainControls2}
         variants={textLeft}
         ref={ref2}

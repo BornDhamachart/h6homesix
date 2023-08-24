@@ -59,22 +59,22 @@ const MinjiHouse = () => {
 
   return (
     <>
-      <div className="font-bold text-6xl md:mt-32 mt-16 ml-16">
-        MIN-JI House
-      </div>
-      <div className="text-3xl mt-2 ml-16">Suksawat 26 | 32.5 SQ.W</div>
-      <div className="mt-20 text-md ml-16">
-        <div className="">
-          บ้านทาวน์โฮม 2 ชั้น ถูกทำการรีโนเวท ปรับปรุงใหม่ในสไตล์ มินิมอล-มูจิ
+      <div className="mt-32 mx-16">
+        <div className="font-bold text-6xl ">MIN-JI House</div>
+        <div className="text-3xl mt-2">Suksawat 26 | 32.5 SQ.W</div>
+        <div className="mt-20 text-md">
+          <div className="">
+            บ้านทาวน์โฮม 2 ชั้น ถูกทำการรีโนเวท ปรับปรุงใหม่ในสไตล์ มินิมอล-มูจิ
+          </div>
+          <div className="">
+            เน้นโทนสี เรียบง่าย สบายตา และเพิ่มความชุ่มชื้นให้กับบ้าน
+          </div>
+          <div className="">
+            ด้วยสวน Sky Light ข้างบ้าน และสวนหินสไตล์ Zen หน้าบ้าน
+          </div>
+          <div className="mt-4">Designers : Yok Teeranitayatarn</div>
+          <div className="">Construction : H75</div>
         </div>
-        <div className="">
-          เน้นโทนสี เรียบง่าย สบายตา และเพิ่มความชุ่มชื้นให้กับบ้าน
-        </div>
-        <div className="">
-          ด้วยสวน Sky Light ข้างบ้าน และสวนหินสไตล์ Zen หน้าบ้าน
-        </div>
-        <div className="mt-4">Designers : Yok Teeranitayatarn</div>
-        <div className="">Construction : H75</div>
       </div>
 
       <div className="md:px-16 px-4 mt-20">
@@ -103,11 +103,12 @@ const MinjiHouse = () => {
         initial="hidden"
       >
         <span className="text-2xl md:ml-16 ml-4">- -</span>
+
         <span className="text-2xl ml-2">Select Projects</span>
       </motion.div>
 
       <motion.div
-        className="md:mb-16"
+        className="mb-24"
         animate={mainControls}
         variants={textLeft}
         ref={ref}
