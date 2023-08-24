@@ -116,10 +116,13 @@ const HomePage = () => {
           ))}
         </motion.div>
         <div className="mt-12">
-          <motion.div className="text-7xl py-4" variants={item}>
+          <motion.div className="text-5xl md:text-7xl py-4" variants={item}>
             รีโนเวทบ้านใหม่
           </motion.div>
-          <motion.div className="text-7xl py-4 ml-20" variants={item}>
+          <motion.div
+            className="text-5xl md:text-7xl py-4 ml-20"
+            variants={item}
+          >
             งบไม่บานปลาย
           </motion.div>
         </div>
@@ -146,7 +149,7 @@ const HomePage = () => {
       </motion.div>
 
       <motion.div
-        className="w-full flex md:justify-end px-6"
+        className="w-full flex justify-center md:justify-end md:px-6"
         variants={image}
         initial="hidden"
         animate="show"
@@ -155,45 +158,43 @@ const HomePage = () => {
           <Carousel effect="fade" autoplay={true} dots={false}>
             <img
               src="./images/CoverImage/Minji-2.jpeg"
-              className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full transition duration-300 ease-out hover:scale-105"
             />
             <img
               src="./images/CoverImage/Minji-3.jpeg"
-              className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full transition duration-300 ease-out hover:scale-105"
             />
             <img
               src="./images/CoverImage/Minji-6.jpeg"
-              className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
-            />
-            <img
-              src="./images/CoverImage/Japandi-2.jpeg"
-              className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full transition duration-300 ease-out hover:scale-105"
             />
             <img
               src="./images/CoverImage/Japandi-4.jpeg"
-              className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full transition duration-300 ease-out hover:scale-105"
             />
             <img
               src="./images/CoverImage/Japandi-5.jpeg"
-              className="lg:w-4/5 lg:h-[750px] h-[400px] w-full transition duration-300 ease-out hover:scale-105"
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full transition duration-300 ease-out hover:scale-105"
             />
           </Carousel>
         </div>
       </motion.div>
 
       <motion.div
-        className="w-full flex lg:justify-end p-6 mt-8"
+        className="w-full flex justify-center text-center md:text-left md:justify-end p-4 md:mt-8"
         animate={mainControls1}
         variants={textUp}
         ref={ref1}
         initial="hidden"
       >
-        <div className="lg:w-4/5">
+        <div className="md:w-4/5">
           <div className="mb-4">
-            <div className="text-4xl py-2">
+            <div className="text-xl md:text-4xl py-2">
               เราอยากให้ทุกคนมีบ้านที่สวยและน่าอยู่
             </div>
-            <div className="text-4xl py-2">ในงบประมาณที่จับต้องได้</div>
+            <div className="text-xl md:text-4xl py-2">
+              ในงบประมาณที่จับต้องได้
+            </div>
           </div>
         </div>
       </motion.div>

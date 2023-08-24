@@ -8,8 +8,8 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-black h-52 flex justify-between items-center">
-      <div className="text-4xl font-bold text-white p-12">
+    <div className="bg-black h-52 md:justify-between justify-evenly items-center flex md:flex-row flex-col">
+      <div className="text-4xl font-bold text-white md:p-12">
         H6 HOMESIX STUDIO
       </div>
       <div>
@@ -30,14 +30,14 @@ const Footer = () => {
             <YoutubeOutlined />
           </a>
         </div>
-        <div className="flex justify-center items-center text-white text-xl px-12 mt-6 gap-2">
+        <div className="md:flex md:justify-center md:items-center text-white text-xl px-12 md:mt-6 gap-2 hidden">
           <PhoneOutlined />
           <div>
             <div>+6681-642-3333 (YOK)</div>
             <div>+6685-115-1974 (SUN)</div>
           </div>
         </div>
-        <div className="flex justify-center items-center text-white text-xl px-12 mt-6 gap-2">
+        <div className="md:flex md:justify-center md:items-center text-white text-xl px-12 md:mt-6 gap-2 hidden">
           <MailOutlined />
           <div>h6homesix.studio@gmail.com</div>
         </div>

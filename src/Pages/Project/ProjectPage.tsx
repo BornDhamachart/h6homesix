@@ -26,11 +26,11 @@ const ProjectPage = () => {
         <span className="text-2xl ml-2">Select Projects</span>
       </motion.div>
 
-      <div className="grid grid-cols-3 gap-4 mb-16 mt-6">
+      <div className="grid md:grid-cols-3 grid-cols-1 md:gap-4 mb-16 mt-6">
         <Link to="/minjihouse" className="cursor-pointer">
           <img
             src="./images/CoverImage/Minji-2.jpeg"
-            className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
+            className="h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
           />
           <div className="group w-10/12 mx-auto font-bold mt-4 ">
             MIN-JI HOUSE
@@ -40,7 +40,7 @@ const ProjectPage = () => {
         <Link to="/japandihouse" className="cursor-pointer">
           <img
             src="./images/CoverImage/Japandi-5.jpeg"
-            className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
+            className="h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
           />
           <div className="group w-10/12 mx-auto font-bold mt-4 ">
             JAPANDI HOUSE

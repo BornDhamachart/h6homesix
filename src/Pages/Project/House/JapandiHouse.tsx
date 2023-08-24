@@ -10,7 +10,14 @@ interface Props {
 }
 
 const ImageComponent: React.FC<Props> = ({ src }) => {
-  return <img src={src} className="lg:h-[750px] h-[400px] w-full" />;
+  return (
+    <div className="flex justify-center">
+      <img
+        src={src}
+        className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full"
+      />
+    </div>
+  );
 };
 
 const MinjiHouse = () => {
@@ -71,7 +78,7 @@ const MinjiHouse = () => {
         <div className="">Construction : Private construction</div>
       </div>
 
-      <div className="px-16 mt-20">
+      <div className="md:px-16 px-4 mt-20">
         <Carousel ref={carouselRef} draggable dots={false}>
           {numbersArray.map((r: number, i: number) => (
             <ImageComponent
@@ -96,12 +103,13 @@ const MinjiHouse = () => {
         ref={ref}
         initial="hidden"
       >
-        <span className="text-2xl ml-16">- -</span>
+        <span className="text-2xl md:ml-16 ml-4">- -</span>
+
         <span className="text-2xl ml-2">Select Projects</span>
       </motion.div>
 
       <motion.div
-        className="mb-16"
+        className="md:mb-16"
         animate={mainControls}
         variants={textLeft}
         ref={ref}

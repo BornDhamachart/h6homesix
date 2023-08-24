@@ -10,7 +10,14 @@ interface Props {
 }
 
 const ImageComponent: React.FC<Props> = ({ src }) => {
-  return <img src={src} className="lg:h-[750px] h-[400px] w-full" />;
+  return (
+    <div className="flex justify-center">
+      <img
+        src={src}
+        className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[300px] w-full"
+      />
+    </div>
+  );
 };
 
 const MinjiHouse = () => {
@@ -52,7 +59,9 @@ const MinjiHouse = () => {
 
   return (
     <>
-      <div className="font-bold text-6xl mt-32 ml-16">MIN-JI House</div>
+      <div className="font-bold text-6xl md:mt-32 mt-16 ml-16">
+        MIN-JI House
+      </div>
       <div className="text-3xl mt-2 ml-16">Suksawat 26 | 32.5 SQ.W</div>
       <div className="mt-20 text-md ml-16">
         <div className="">
@@ -68,7 +77,7 @@ const MinjiHouse = () => {
         <div className="">Construction : H75</div>
       </div>
 
-      <div className="px-16 mt-20">
+      <div className="md:px-16 px-4 mt-20">
         <Carousel ref={carouselRef} draggable dots={false}>
           {numbersArray.map((r: number, i: number) => (
             <ImageComponent
@@ -93,12 +102,12 @@ const MinjiHouse = () => {
         ref={ref}
         initial="hidden"
       >
-        <span className="text-2xl ml-16">- -</span>
+        <span className="text-2xl md:ml-16 ml-4">- -</span>
         <span className="text-2xl ml-2">Select Projects</span>
       </motion.div>
 
       <motion.div
-        className="mb-16"
+        className="md:mb-16"
         animate={mainControls}
         variants={textLeft}
         ref={ref}
