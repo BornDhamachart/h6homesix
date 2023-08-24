@@ -44,7 +44,7 @@ const MinjiHouse = () => {
 
   let numbersArray = [];
 
-  for (var i = 1; i <= 19; i++) {
+  for (var i = 1; i <= 18; i++) {
     numbersArray.push(i);
   }
 
@@ -52,20 +52,23 @@ const MinjiHouse = () => {
 
   return (
     <>
-      <div className="font-bold text-6xl mt-32 ml-16">MIN-JI House</div>
-      <div className="text-3xl mt-2 ml-16">Suksawat 26 | 32.5 SQ.W</div>
+      <div className="font-bold text-6xl mt-32 ml-16">JAPANDI House</div>
+      <div className="text-3xl mt-2 ml-16">Suksawat 30 | 35.7 SQ.W</div>
       <div className="mt-20 text-md ml-16">
         <div className="">
-          บ้านทาวน์โฮม 2 ชั้น ถูกทำการรีโนเวท ปรับปรุงใหม่ในสไตล์ มินิมอล-มูจิ
+          บ้านเดี่ยว 2 ชั้น ทำการรีโนเวท ตกแต่งใหม่ ในสไตล์เจแปนดิ (JAPANDI)
+          เป็นส่วนผสมระหว่าง มูจิ-สแกนดิเนเวียน
         </div>
         <div className="">
-          เน้นโทนสี เรียบง่าย สบายตา และเพิ่มความชุ่มชื้นให้กับบ้าน
+          เน้นความเรียบง่าย โปร่ง สบาย ใช้เฟอร์นิเจอร์สีเข้ม
+          ของตกแต่งจะเน้นใช้สีดำ
         </div>
         <div className="">
-          ด้วยสวน Sky Light ข้างบ้าน และสวนหินสไตล์ Zen หน้าบ้าน
+          ประดับด้วยสวนหินรอบบ้าน เน้นการดูแลรักษาง่าย
+          และเข้ากับสไตล์ญี่ปุ่นของบ้าน
         </div>
         <div className="mt-4">Designers : Yok Teeranitayatarn</div>
-        <div className="">Construction : H75</div>
+        <div className="">Construction : Private construction</div>
       </div>
 
       <div className="px-16 mt-20">
@@ -73,7 +76,7 @@ const MinjiHouse = () => {
           {numbersArray.map((r: number, i: number) => (
             <ImageComponent
               key={i}
-              src={`./images/MinjiHouse/Minji-${r}.jpeg`}
+              src={`./images/JapandiHouse/Japandi-${r}.jpeg`}
             />
           ))}
         </Carousel>

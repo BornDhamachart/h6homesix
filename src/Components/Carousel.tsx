@@ -1,7 +1,5 @@
-import React, { Component } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-
 
 const Carousel = () => {
   const settings = {
@@ -15,35 +13,46 @@ const Carousel = () => {
   return (
     <div className="h-64">
       <Slider {...settings}>
-        <Link to="/minjihouse"  className="cursor-pointer">
+        <Link to="/minjihouse" className="cursor-pointer">
           <img
-            src="./images/2-2-1024x7681.jpeg"
+            src="./images/CoverImage/Minji-2.jpeg"
             className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
           />
-          <div className="w-10/12 mx-auto font-bold mt-1">MIN-JI HOUSE</div>
+          <div className="group w-10/12 mx-auto font-bold mt-4 ">
+            MIN-JI HOUSE
+            <span className="block w-0 group-hover:w-full transition-all duration-300 h-0.5 bg-black"></span>
+          </div>
         </Link>
-        <Link to="/minjihouse"  className="cursor-pointer">
+        <Link to="/japandihouse" className="cursor-pointer">
           <img
-            src="./images/2-2-1024x7681.jpeg"
+            src="./images/CoverImage/Japandi-5.jpeg"
             className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
           />
-          <div className="w-10/12 mx-auto font-bold mt-1">HOUSE EKKAMAI</div>
+          <div className="group w-10/12 mx-auto font-bold mt-4 ">
+            JAPANDI HOUSE
+            <span className="block w-0 group-hover:w-full transition-all duration-300 h-0.5 bg-black"></span>
+          </div>
         </Link>
-        <Link to="/minjihouse"  className="cursor-pointer">
+        <Link to="/minjihouse" className="cursor-pointer">
           <img
-            src="./images/2-2-1024x7681.jpeg"
+            src="./images/CoverImage/Minji-3.jpeg"
             className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
           />
-          <div className="w-10/12 mx-auto font-bold mt-1">HOUSE EKKAMAI</div>
+          <div className="group w-10/12 mx-auto font-bold mt-4 ">
+            MIN-JI HOUSE
+            <span className="block w-0 group-hover:w-full transition-all duration-300 h-0.5 bg-black"></span>
+          </div>
         </Link>
-        <Link to="/minjihouse"  className="cursor-pointer">
+        <Link to="/japandihouse" className="cursor-pointer">
           <img
-            src="./images/2-2-1024x7681.jpeg"
+            src="./images/CoverImage/Japandi-2.jpeg"
             className="h-64 w-10/12 mx-auto transition duration-300 ease-out hover:scale-105"
           />
-          <div className="w-10/12 mx-auto font-bold mt-1">HOUSE EKKAMAI</div>
+          <div className="group w-10/12 mx-auto font-bold mt-4 ">
+            JAPANDI HOUSE
+            <span className="block w-0 group-hover:w-full transition-all duration-300 h-0.5 bg-black"></span>
+          </div>
         </Link>
-
       </Slider>
     </div>
   );

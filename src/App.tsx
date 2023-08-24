@@ -9,24 +9,34 @@ import Project from "./Pages/Project/ProjectPage";
 import Footer from "./Components/Footer";
 import { AnimatePresence } from "framer-motion";
 import MinjiHouse from "./Pages/Project/House/MinjiHouse";
+import JapandiHouse from "./Pages/Project/House/JapandiHouse";
 
 function App() {
   return (
     <>
       <AnimatePresence>
-        {/* <Navbar /> */}
+        <Navbar key="navbar" />
         <div className="pt-20">
           <Routes>
-            <Route path="" element={<Home />} />
-            <Route path="projects" element={<Project />} />
-            <Route path="minjihouse" element={<MinjiHouse />}/>
-            <Route path="services" element={<Services />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="*" element={<>404 Not found</>} />
+            <Route key="home" path="" element={<Home />} />
+            <Route key="projects" path="projects" element={<Project />} />
+            <Route
+              key="minjihouse"
+              path="minjihouse"
+              element={<MinjiHouse />}
+            />
+            <Route
+              key="japandihouse"
+              path="japandihouse"
+              element={<JapandiHouse />}
+            />
+            <Route key="services" path="services" element={<Services />} />
+            <Route key="about" path="about" element={<About />} />
+            <Route key="contact" path="contact" element={<Contact />} />
+            <Route key="notfound" path="*" element={<>404 Not found</>} />
           </Routes>
         </div>
-        <Footer />
+        <Footer key="footer" />
       </AnimatePresence>
     </>
   );
