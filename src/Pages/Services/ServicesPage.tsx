@@ -3,7 +3,7 @@ import type { CollapseProps } from "antd";
 import { Timeline } from "antd";
 import { motion } from "framer-motion";
 
-const ServicesPage = () => {
+const ServicesPage: React.FC = () => {
   const items: CollapseProps["items"] = [
     {
       key: "1",

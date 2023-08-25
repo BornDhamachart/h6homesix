@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 opacity-90">

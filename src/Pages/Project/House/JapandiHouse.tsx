@@ -20,7 +20,7 @@ const ImageComponent: React.FC<Props> = ({ src }) => {
   );
 };
 
-const JapandiHouse = () => {
+const JapandiHouse: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -63,20 +63,20 @@ const JapandiHouse = () => {
         <div className="font-bold text-6xl">JAPANDI House</div>
         <div className="text-3xl mt-2">Suksawat 30 | 35.7 SQ.W</div>
         <div className="mt-20 text-md">
-          <div className="">
+          <div>
             บ้านเดี่ยว 2 ชั้น ทำการรีโนเวท ตกแต่งใหม่ ในสไตล์เจแปนดิ (JAPANDI)
             เป็นส่วนผสมระหว่าง มูจิ-สแกนดิเนเวียน
           </div>
-          <div className="">
+          <div>
             เน้นความเรียบง่าย โปร่ง สบาย ใช้เฟอร์นิเจอร์สีเข้ม
             ของตกแต่งจะเน้นใช้สีดำ
           </div>
-          <div className="">
+          <div>
             ประดับด้วยสวนหินรอบบ้าน เน้นการดูแลรักษาง่าย
             และเข้ากับสไตล์ญี่ปุ่นของบ้าน
           </div>
           <div className="mt-4">Designers : Yok Teeranitayatarn</div>
-          <div className="">Construction : Private construction</div>
+          <div>Construction : Private construction</div>
         </div>
       </div>
       <div className="md:px-16 px-4 mt-20">

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const AboutPage = () => {
+const AboutPage: React.FC = () => {
   const textUp = {
     hidden: { opacity: 0, y: 15 },
     show: {

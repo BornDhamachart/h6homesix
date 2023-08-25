@@ -20,7 +20,7 @@ const ImageComponent: React.FC<Props> = ({ src }) => {
   );
 };
 
-const MinjiHouse = () => {
+const MinjiHouse: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -55,25 +55,23 @@ const MinjiHouse = () => {
     numbersArray.push(i);
   }
 
-  console.log("numbersArray", numbersArray);
-
   return (
     <>
       <div className="mt-32 mx-16">
         <div className="font-bold text-6xl ">MIN-JI House</div>
         <div className="text-3xl mt-2">Suksawat 26 | 32.5 SQ.W</div>
         <div className="mt-20 text-md">
-          <div className="">
+          <div>
             บ้านทาวน์โฮม 2 ชั้น ถูกทำการรีโนเวท ปรับปรุงใหม่ในสไตล์ มินิมอล-มูจิ
           </div>
-          <div className="">
+          <div>
             เน้นโทนสี เรียบง่าย สบายตา และเพิ่มความชุ่มชื้นให้กับบ้าน
           </div>
-          <div className="">
+          <div>
             ด้วยสวน Sky Light ข้างบ้าน และสวนหินสไตล์ Zen หน้าบ้าน
           </div>
           <div className="mt-4">Designers : Yok Teeranitayatarn</div>
-          <div className="">Construction : H75</div>
+          <div>Construction : H75</div>
         </div>
       </div>
 

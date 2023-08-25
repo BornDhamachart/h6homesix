@@ -6,7 +6,7 @@ import {
   MailOutlined,
 } from "@ant-design/icons";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div className="bg-black h-52 md:justify-between justify-evenly items-center flex md:flex-row flex-col">
       <div className="text-4xl font-bold text-white md:p-12">

@@ -5,7 +5,21 @@ import { Carousel } from "antd";
 import { ForwardOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
-const HomePage = () => {
+interface Props {
+  src : string;
+}
+
+
+const ImageHomeComponent: React.FC<Props> = ({ src }) => {
+  return (
+          <img
+              src={src}
+              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
+            />
+  );
+};
+
+const HomePage: React.FC = () => {
   const ref1 = useRef(null);
   const isInView1 = useInView(ref1, { once: false });
   const ref2 = useRef(null);
@@ -156,26 +170,11 @@ const HomePage = () => {
       >
         <div className="w-4/5">
           <Carousel effect="fade" autoplay={true} dots={false}>
-            <img
-              src="./images/CoverImage/Minji-2.jpeg"
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
-            />
-            <img
-              src="./images/CoverImage/Minji-3.jpeg"
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
-            />
-            <img
-              src="./images/CoverImage/Minji-6.jpeg"
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
-            />
-            <img
-              src="./images/CoverImage/Japandi-4.jpeg"
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
-            />
-            <img
-              src="./images/CoverImage/Japandi-5.jpeg"
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
-            />
+          <ImageHomeComponent src="./images/CoverImage/Minji-2.jpeg" />
+          <ImageHomeComponent src="./images/CoverImage/Minji-3.jpeg" />
+          <ImageHomeComponent src="./images/CoverImage/Minji-6.jpeg" />
+          <ImageHomeComponent src="./images/CoverImage/Japandi-4.jpeg" />
+          <ImageHomeComponent src="./images/CoverImage/Japandi-5.jpeg" />
           </Carousel>
         </div>
       </motion.div>
