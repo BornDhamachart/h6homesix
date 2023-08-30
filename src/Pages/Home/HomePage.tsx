@@ -20,26 +20,18 @@ const ImageHomeComponent: React.FC<Props> = ({ src }) => {
 };
 
 const HomePage: React.FC = () => {
-  const ref1 = useRef(null);
-  const isInView1 = useInView(ref1, { once: false });
-  const ref2 = useRef(null);
-  const isInView2 = useInView(ref2, { once: false });
-  const mainControls1 = useAnimation();
-  const mainControls2 = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
 
   useEffect(() => {
-    if (isInView1) {
-      mainControls1.start("show");
+    if (isInView) {
+      mainControls.start("show");
       console.log("Inview1");
     }
-  }, [isInView1]);
+  }, [isInView]);
 
-  useEffect(() => {
-    if (isInView2) {
-      mainControls2.start("show");
-      console.log("Inview2");
-    }
-  }, [isInView2]);
 
   const container = {
     show: {
@@ -179,11 +171,11 @@ const HomePage: React.FC = () => {
         </div>
       </motion.div>
 
+<div ref={ref}>
       <motion.div
         className="w-full flex justify-center text-center md:text-left md:justify-end p-4 md:mt-8"
-        animate={mainControls1}
+        animate={mainControls}
         variants={textUp}
-        ref={ref1}
         initial="hidden"
       >
         <div className="md:w-4/5">
@@ -200,9 +192,8 @@ const HomePage: React.FC = () => {
 
       <motion.div
         className="w-full flex justify-center mb-6"
-        animate={mainControls1}
+        animate={mainControls}
         variants={textUp}
-        ref={ref1}
         initial="hidden"
       >
         <a
@@ -216,9 +207,8 @@ const HomePage: React.FC = () => {
 
       <motion.div
         className="w-full flex justify-center my-12 gap-6 items-center"
-        animate={mainControls1}
+        animate={mainControls}
         variants={textUp}
-        ref={ref1}
         initial="hidden"
       >
         <img src="./images/before.jpeg" className="w-1/3" />
@@ -227,12 +217,13 @@ const HomePage: React.FC = () => {
         </div>
         <img src="./images/after.jpeg" className="w-1/3" />
       </motion.div>
+      </div>
 
+      <div ref={ref}>
       <motion.div
         className="mt-16 mb-6"
-        animate={mainControls2}
+        animate={mainControls}
         variants={textLeft}
-        ref={ref2}
         initial="hidden"
       >
         <span className="text-2xl md:ml-16 ml-8">- -</span>
@@ -241,13 +232,13 @@ const HomePage: React.FC = () => {
 
       <motion.div
         className="mb-24"
-        animate={mainControls2}
+        animate={mainControls}
         variants={textLeft}
-        ref={ref2}
         initial="hidden"
       >
         <CarouselComponent />
       </motion.div>
+      </div>
     </>
   );
 };
