@@ -6,16 +6,15 @@ import { ForwardOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 interface Props {
-  src : string;
+  src: string;
 }
-
 
 const ImageHomeComponent: React.FC<Props> = ({ src }) => {
   return (
-          <img
-              src={src}
-              className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
-            />
+    <img
+      src={src}
+      className="lg:w-[1024px] lg:h-[768px] md:h-[400px] h-[250px] w-full transition duration-300 ease-out hover:scale-105"
+    />
   );
 };
 
@@ -23,15 +22,22 @@ const HomePage: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
+  const ref2 = useRef(null);
+  const isInView2 = useInView(ref2, { once: true });
+  const mainControls2 = useAnimation();
 
 
   useEffect(() => {
     if (isInView) {
       mainControls.start("show");
-      console.log("Inview1");
     }
   }, [isInView]);
 
+  useEffect(() => {
+    if (isInView) {
+      mainControls2.start("show");
+    }
+  }, [isInView2]);
 
   const container = {
     show: {
@@ -162,82 +168,82 @@ const HomePage: React.FC = () => {
       >
         <div className="w-4/5">
           <Carousel effect="fade" autoplay={true} dots={false}>
-          <ImageHomeComponent src="./images/CoverImage/Minji-2.jpeg" />
-          <ImageHomeComponent src="./images/CoverImage/Minji-3.jpeg" />
-          <ImageHomeComponent src="./images/CoverImage/Minji-6.jpeg" />
-          <ImageHomeComponent src="./images/CoverImage/Japandi-4.jpeg" />
-          <ImageHomeComponent src="./images/CoverImage/Japandi-5.jpeg" />
+            <ImageHomeComponent src="./images/CoverImage/Minji-2.jpeg" />
+            <ImageHomeComponent src="./images/CoverImage/Minji-3.jpeg" />
+            <ImageHomeComponent src="./images/CoverImage/Minji-6.jpeg" />
+            <ImageHomeComponent src="./images/CoverImage/Japandi-4.jpeg" />
+            <ImageHomeComponent src="./images/CoverImage/Japandi-5.jpeg" />
           </Carousel>
         </div>
       </motion.div>
 
-<div ref={ref}>
-      <motion.div
-        className="w-full flex justify-center text-center md:text-left md:justify-end p-4 md:mt-8"
-        animate={mainControls}
-        variants={textUp}
-        initial="hidden"
-      >
-        <div className="md:w-4/5">
-          <div className="mb-4">
-            <div className="text-xl md:text-4xl py-2">
-              เราอยากให้ทุกคนมีบ้านที่สวยและน่าอยู่
-            </div>
-            <div className="text-xl md:text-4xl py-2">
-              ในงบประมาณที่จับต้องได้
+      <div ref={ref}>
+        <motion.div
+          className="w-full flex justify-center text-center md:text-left md:justify-end p-4 md:mt-8"
+          animate={mainControls}
+          variants={textUp}
+          initial="hidden"
+        >
+          <div className="md:w-4/5">
+            <div className="mb-4">
+              <div className="text-xl md:text-4xl py-2">
+                เราอยากให้ทุกคนมีบ้านที่สวยและน่าอยู่
+              </div>
+              <div className="text-xl md:text-4xl py-2">
+                ในงบประมาณที่จับต้องได้
+              </div>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
 
-      <motion.div
-        className="w-full flex justify-center mb-6"
-        animate={mainControls}
-        variants={textUp}
-        initial="hidden"
-      >
-        <a
-          className="block w-2/3 text-center bg-gray-200 rounded-xl mt-6 py-2 text-xl cursor-pointer hover:scale-105 transition duration-300"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSc1fPIBxC5Ui3hnFzH1DqGqVAwndtw-KHNl1BCYXM-c55XZyg/viewform"
-          target="_blank"
+        <motion.div
+          className="w-full flex justify-center mb-6"
+          animate={mainControls}
+          variants={textUp}
+          initial="hidden"
         >
-          สนใจรีโนเวทบ้าน
-        </a>
-      </motion.div>
+          <a
+            className="block w-2/3 text-center bg-gray-200 rounded-xl mt-6 py-2 text-xl cursor-pointer hover:scale-105 transition duration-300"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc1fPIBxC5Ui3hnFzH1DqGqVAwndtw-KHNl1BCYXM-c55XZyg/viewform"
+            target="_blank"
+          >
+            สนใจรีโนเวทบ้าน
+          </a>
+        </motion.div>
 
-      <motion.div
-        className="w-full flex justify-center my-12 gap-6 items-center"
-        animate={mainControls}
-        variants={textUp}
-        initial="hidden"
-      >
-        <img src="./images/before.jpeg" className="w-1/3" />
-        <div className="text-4xl text-gray-300">
-          <ForwardOutlined />
-        </div>
-        <img src="./images/after.jpeg" className="w-1/3" />
-      </motion.div>
+        <motion.div
+          className="w-full flex justify-center my-12 gap-6 items-center"
+          animate={mainControls}
+          variants={textUp}
+          initial="hidden"
+        >
+          <img src="./images/before.jpeg" className="w-1/3" />
+          <div className="text-4xl text-gray-300">
+            <ForwardOutlined />
+          </div>
+          <img src="./images/after.jpeg" className="w-1/3" />
+        </motion.div>
       </div>
 
-      <div ref={ref}>
-      <motion.div
-        className="mt-16 mb-6"
-        animate={mainControls}
-        variants={textLeft}
-        initial="hidden"
-      >
-        <span className="text-2xl md:ml-16 ml-8">- -</span>
-        <span className="text-2xl ml-2">Select Projects</span>
-      </motion.div>
+      <div ref={ref2}>
+        <motion.div
+          className="mt-16 mb-6"
+          animate={mainControls2}
+          variants={textLeft}
+          initial="hidden"
+        >
+          <span className="text-2xl md:ml-16 ml-8">- -</span>
+          <span className="text-2xl ml-2">Select Projects</span>
+        </motion.div>
 
-      <motion.div
-        className="mb-24"
-        animate={mainControls}
-        variants={textLeft}
-        initial="hidden"
-      >
-        <CarouselComponent />
-      </motion.div>
+        <motion.div
+          className="mb-24"
+          animate={mainControls2}
+          variants={textLeft}
+          initial="hidden"
+        >
+          <CarouselComponent />
+        </motion.div>
       </div>
     </>
   );
