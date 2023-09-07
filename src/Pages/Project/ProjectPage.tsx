@@ -14,7 +14,7 @@ const ImageProjectComponent: React.FC<Props> = ({ path, src, name }) => {
         src={src}
         className="h-64 w-10/12 max-w-lg mx-auto transition duration-300 ease-out hover:scale-105"
       />
-      <div className="group w-10/12 mx-auto font-bold mt-4 ">
+      <div className="group w-10/12 mx-auto font-bold mt-4">
         {name}
         <span className="block w-0 group-hover:w-full transition-all duration-300 h-0.5 bg-black"></span>
       </div>
@@ -49,12 +49,12 @@ const ProjectPage: React.FC = () => {
 
       <div className="grid md:grid-cols-3 grid-cols-1 md:gap-4 mb-16 mt-6">
         <ImageProjectComponent
-          path="minjihouse"
+          path="/minjihouse"
           src="./images/CoverImage/Minji-2.jpeg"
           name="MIN-JI HOUSE"
         />
         <ImageProjectComponent
-          path="japandihouse"
+          path="/japandihouse"
           src="./images/CoverImage/Japandi-5.jpeg"
           name="JAPANDI HOUSE"
         />
